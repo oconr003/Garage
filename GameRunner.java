@@ -12,9 +12,11 @@ public class GameRunner {
 
       System.out.print("Enter 'i' for up, 'm' for down, 'j' for left, 'l' for right: ");
 	  currentGame.showBoard();
-      String userInput = scanner.next();
     	  currentGame.compass();
+      String userInput = scanner.next();
       currentGame.movePlayer(userInput);
+      
+      
     } while (!currentGame.isGameOver());
   }
 

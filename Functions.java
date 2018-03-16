@@ -69,13 +69,18 @@ public class Functions {
 	}
 
   public void showBoard() {
+  	System.out.println();
     char[][] board = new char[10][10];
     board[this.player.x][this.player.y] = 'P';
 
     for (int i=0; i<10; i++) {
       for (int j=0; j<10; j++) {
-        System.out.println(board[i][j]);
-      }
+    	  if (board[i][j]!='P' ) {
+        System.out.print(board[i][j] + "*\t");
+    	  } else {
+    		  System.out.print(board[i][j] + "\t");
+    	  }
+      } System.out.println();
     }
   }
   
